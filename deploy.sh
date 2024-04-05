@@ -61,7 +61,7 @@ if [ ! -f "package.json" ]; then
     exit 1
 else
     echo "We have found package.json file available in your project directory. We are going to Build the project for "$project_dir" . "
-    npm run run build
+    npm run build
 fi
 
 sudo mv ./build/* /var/www/html/

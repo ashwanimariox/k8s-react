@@ -60,9 +60,11 @@ if [ ! -f "package.json" ]; then
     echo "Please ensure that you have package.json in your project"
     exit 1
 else
-    echo "We have found package.json file available in your project directory. We are going to execute command for running project npm run start"
-    npm run start
+    echo "We have found package.json file available in your project directory. We are going to Build the project for "$project_dir" . "
+    npm run run build
 fi
+
+sudo mv ./build/* /var/www/html/
 
 echo "Deployment successfully done"
 echo "Thank you Developer"
